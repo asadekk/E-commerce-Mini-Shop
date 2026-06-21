@@ -47,6 +47,7 @@ header {
 .navIcons {
   display: flex;
   gap: 16px;
+  align-items: center ;
 }
 
 a {
@@ -126,7 +127,7 @@ main {
 
 .cord {
   width: 296px;
-  height: 481px;
+  height: 450px;
   border-radius: 16px;
   background-color: #F4F4F5;
   margin-bottom: 32px;

@@ -1,11 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
 import searchIcon from './assets/search.svg'
 import shopIcon from './assets/shop.svg'
 import menuIcon from './assets/icons8-menu.svg'
+import PraductCard from './companet/praductCard'
 
 function App() {
+  const [ search,setSearch] = useState("")
+  console.log(search);
+  
   return (
     <div className='container'>
       <div className='grid-container'>
@@ -18,6 +22,14 @@ function App() {
             <a href="#">Chegirmalar</a>
           </div>
           <div className="navIcons">
+            <label>
+              <input type="text"
+              style={{ padding: '10px', width: '300px', borderRadius: '5px', border: '1px solid #ccc' }} 
+                placeholder='Mahsulot nomi'
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </label>
             <img src={searchIcon} alt="search" />
             <img src={shopIcon} alt="shop" />
           </div>
@@ -29,25 +41,7 @@ function App() {
             <p className='mainText'>Uyingiz va ofisingiz uchun minimalist, zamonaviy va sifatli buyumlar to'plami.</p>
           </div>
           <div className='praduct'>
-            <div className='contBtn'>
-              <button className='menu'>Uy anjomlari</button>
-              <button className='menu'>Barchasi</button>
-              <button className='menu'>Osh xona</button>
-              <button className='menu'>Dekor</button>
-              <button className='menu'>Mebel</button>
-              <button className='menu'>Kanselyariya</button>
-              <button className='menu'>Aksesuarlar</button>
-            </div>
-            <div className='praductMenu'>
-              <div className='contCord'>
-                <div className="cord"></div>
-                <div className="cord"></div>
-                <div className="cord"></div>
-                <div className="cord"></div>
-                <div className="cord"></div>
-                <div className="cord"></div>
-              </div>
-            </div>
+            <PraductCard />
           </div>
         </main>
 
