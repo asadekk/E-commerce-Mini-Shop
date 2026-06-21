@@ -1,0 +1,17 @@
+<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36.000000" height="36.000000" fill="none" customFrame="url(#clipPath_1)">
+	<defs>
+		<clipPath id="clipPath_1">
+			<rect width="36.000000" height="36.000000" x="0.000000" y="0.000000" rx="18.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+		<clipPath id="clipPath_2">
+			<rect width="20.000000" height="20.000000" x="8.000000" y="8.000000" fill="rgb(255,255,255)" />
+		</clipPath>
+	</defs>
+	<rect id="Button" width="36.000000" height="36.000000" x="0.000000" y="0.000000" rx="18.000000" />
+	<g id="SVG" clip-path="url(#clipPath_2)" customFrame="url(#clipPath_2)">
+		<rect id="SVG" width="20.000000" height="20.000000" x="8.000000" y="8.000000" />
+		<path id="Vector" d="M21.3399 16.33C21.3399 18.1691 19.8468 19.66 18.0049 19.66C16.1631 19.66 14.6699 18.1691 14.6699 16.33" fill-rule="nonzero" stroke="rgb(24,24,27)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+		<path id="Vector" d="M10.5901 13.03L25.4201 13.03" stroke="rgb(24,24,27)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+		<path id="Vector" d="M10.5 13.5599L10.5 24.673C10.5 25.5937 11.2462 26.34 12.1667 26.34L23.8333 26.34C24.7538 26.34 25.5 25.5937 25.5 24.673L25.5 13.5599C25.5 13.1993 25.383 12.8483 25.1667 12.5597L23.5 10.3368C23.1852 9.91704 22.6913 9.67 22.1667 9.67L13.8333 9.67C13.3087 9.67 12.8148 9.91704 12.5 10.3368L10.8333 12.5597C10.617 12.8483 10.5 13.1993 10.5 13.5599Z" fill-rule="nonzero" stroke="rgb(24,24,27)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.000000" />
+	</g>
+</svg>

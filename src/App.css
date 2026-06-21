@@ -1,0 +1,180 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+}
+
+/* Grid balandligini "auto" qildik, kontent sig'ishiga qarab o'zi kattalashadi */
+.grid-container {
+  display: grid;
+  width: 1018px;
+  grid-template-rows: 64px auto 124px; 
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-area: header;
+  background-color: #FAFAFA;
+  padding: 0px 32px;
+}
+
+.burger-menu {
+  display: none !important; /* Desktopda yashirin */
+  width: 32px;
+  height: 32px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+}
+
+.navIcons {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+a:hover {
+  color: #71717A;
+}
+
+hr {
+  background-color: #F4F4F5;
+}
+
+/* Main */
+main {
+  grid-area: main;
+  background-color: #FAFAFA;
+}
+
+.mainGuzlik { 
+  width: 100%;
+  height: 284px;
+  padding-top: 97px;
+  text-align: center;
+}
+
+.mainOddiylik {
+  font-size: 48px;
+  font-weight: bold;
+  padding-bottom: 18px;
+}
+
+.mainText {
+  font-size: 18px;
+  font-weight: 600; /* TO'G'RILANDI */
+  color: #71717A;
+}
+
+.contBtn {
+  width: 954px;
+  height: 53px;
+  margin: auto;
+  margin-top: 48px;
+}
+
+.menu {
+  padding: 10px 16px;
+  margin-right: 8px;
+  border-radius: 25px;
+  color: #52525B;
+  background-color: white;
+  border: 1px solid rgb(243, 241, 241); /* TO'G'RILANDI */
+  cursor: pointer;
+}
+
+.menu:focus {
+  background-color: black;
+  color: white;
+}
+
+.praductMenu {
+  margin: 32px 32px;
+  width: 954px;
+  /* Qat'iy height olib tashlandi, kontent o'zi moslashadi */
+}
+
+.contCord {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* auto-dan ko'ra aniqroq usul */
+  justify-content: space-between;
+}
+
+.cord {
+  width: 296px;
+  height: 481px;
+  border-radius: 16px;
+  background-color: #F4F4F5;
+  margin-bottom: 32px;
+}
+
+/* Footer */
+footer {
+  grid-area: footer;
+  background-color: #f9f9f9;
+}
+
+.footerEnd {
+  display: flex;
+  width: 1018px;
+  height: 28px;
+  justify-content: space-between;
+  padding: 48px 32px;
+}
+/* Telefon versiyasi uchun */
+@media (max-width: 768px) {
+  .container{
+    width: 600px;
+  }
+  .grid-container, .footerEnd {
+    width: 100%; 
+  }
+  header main footer {
+    width: auto;
+  }
+  header .navLinks {
+    display: none; 
+  }
+
+  .burger-menu {
+    display: block !important;
+  }
+
+ .contCord {
+    grid-template-columns: 1fr; 
+    justify-items: center; 
+    gap: 16px;
+  }
+
+  .cord {
+    width: 100%; /* Telefon ekranining kengligini oladi */
+    max-width: 343px; /* Telefon ekranida juda kengayib ketmasligi uchun cheklov */
+  } 
+  .contBtn{
+    overflow-x: auto;
+  }
+}
