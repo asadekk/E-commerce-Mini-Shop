@@ -131,6 +131,13 @@ main {
   border-radius: 16px;
   background-color: #F4F4F5;
   margin-bottom: 32px;
+  transition: 0.5s;
+}
+.imgCord{
+  transition: 0.5s;
+}
+.imgCord:hover{
+ padding: 10px 10px;
 }
 
 /* Footer */
@@ -146,7 +153,11 @@ footer {
   justify-content: space-between;
   padding: 48px 32px;
 }
-/* Telefon versiyasi uchun */
+
+
+/* //Phone */
+
+
 @media (max-width: 768px) {
   .container{
     width: 600px;
@@ -172,8 +183,8 @@ footer {
   }
 
   .cord {
-    width: 100%; /* Telefon ekranining kengligini oladi */
-    max-width: 343px; /* Telefon ekranida juda kengayib ketmasligi uchun cheklov */
+    width: 100%;
+    max-width: 343px; 
   } 
   .contBtn{
     overflow-x: auto;
