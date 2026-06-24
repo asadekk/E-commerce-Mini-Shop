@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { getCord } from '../ApiServers/userServers'
 
+
 interface Rating {
     rate: number;
     count: number;
@@ -19,6 +20,8 @@ interface Product {
 function ProductCard() {
     const [cord, setCord] = useState<Product[]>([]);
     const [category, setCategory] = useState("Barchasi")
+
+
     async function fetchCord() {
         try {
             const res = await getCord();
@@ -37,6 +40,8 @@ function ProductCard() {
             ? cord
             : cord.filter((product) => product.category === category);
 
+
+   
     return (
         <div>
             <div className='contBtn'>
@@ -53,11 +58,10 @@ function ProductCard() {
                             <div key={item.id} className="cord">
                                 <img className='imgCord' src={item.image} width={"100%"} height={"296px"} alt={item.title} />
                                 <div style={{ padding: "20px 20px" }}>
-                                    <h3 style={{ fontSize: "14px" }}>{item.title}</h3>
-                                    {/* <h6>{item.description}</h6> */}
-                                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: "space-between", marginTop: "14px" }}>
-                                        <h2>{item.price} sum</h2>
-                                        <img src="https://img.icons8.com/?size=100&id=qP17ftfJdw0t&format=png&color=000000" width={"40px"} height={"40px"} alt="" />
+                                    <div className='cordName'><h3 style={{ fontSize: "14px" }}>{item.title.slice(0,50)+ '...'}</h3></div>
+                                    <div className='cordPrice'>
+                                        <h2>{item.price}00 000 sum</h2>
+                                        <img  src="https://img.icons8.com/?size=100&id=qP17ftfJdw0t&format=png&color=000000" width={"40px"} height={"40px"} alt="" />
                                     </div>
                                 </div>
                             </div>
