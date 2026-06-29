@@ -41,7 +41,7 @@ function ProductCard() {
             : cord.filter((product) => product.category === category);
 
 
-   
+
     return (
         <div>
             <div className='contBtn'>
@@ -56,12 +56,14 @@ function ProductCard() {
                     {filteredProducts.map((item) => {
                         return (
                             <div key={item.id} className="cord">
-                                <img className='imgCord' src={item.image} width={"100%"} height={"296px"} alt={item.title} />
+                                <img className='imgCord' src={item.image} width={"295"} height={"295px"} alt={item.title} />
                                 <div style={{ padding: "20px 20px" }}>
-                                    <div className='cordName'><h3 style={{ fontSize: "14px" }}>{item.title.slice(0,50)+ '...'}</h3></div>
+                                    <div className='cordName'>
+                                        <h3 className='cordTitle'>{item.title.slice(0, 50) + '...'}</h3></div>
+                                        <h6 className='cordDescrip'>{item.description.slice(0,50) + '...'}</h6>
                                     <div className='cordPrice'>
-                                        <h2>{item.price}00 000 sum</h2>
-                                        <img  src="https://img.icons8.com/?size=100&id=qP17ftfJdw0t&format=png&color=000000" width={"40px"} height={"40px"} alt="" />
+                                        <h2 className='cordPrice'>{item.price} 000 sum</h2>
+                                        <img src="https://img.icons8.com/?size=100&id=qP17ftfJdw0t&format=png&color=000000" width={"40px"} height={"40px"} alt="" />
                                     </div>
                                 </div>
                             </div>
